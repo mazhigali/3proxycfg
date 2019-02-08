@@ -4,9 +4,8 @@ PASS="hahashka130"
 
 rm -f 3pro*
 
-yum -y install wget
 echo "nameserver 9.9.9.9" > /etc/resolv.conf
-wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+curl http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -o epel-release-latest-7.noarch.rpm
 rpm -ivh epel-release-latest-7.noarch.rpm
 yum -y install 3proxy bind-utils
 IP=($(dig +short myip.opendns.com @resolver1.opendns.com))
