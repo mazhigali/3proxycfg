@@ -11,7 +11,7 @@ yum -y install 3proxy bind-utils
 IP=($(dig +short myip.opendns.com @resolver1.opendns.com))
 #mkdir /etc/3proxy/
 
-wget --no-check-certificate 'https://raw.githubusercontent.com/mazhigali/3proxycfg/master/3proxy.cfg'
+curl 'https://raw.githubusercontent.com/mazhigali/3proxycfg/master/3proxy.cfg' -o 3proxy.cfg
 cp 3proxy.cfg /etc/
 #echo "$USERNAME:CL:$PASS" > /etc/3proxy/.proxyauth
 #chmod 600 /etc/3proxy/.proxyauth
